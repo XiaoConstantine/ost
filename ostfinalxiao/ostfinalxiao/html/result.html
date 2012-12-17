@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+        <title>Home</title>
+    </head>
+    <body>
+        <div>Welcome, {{ user }}</div>
+        <div>Category:<input type="radio" checked="checked" name="category_key" value="{{category.key}}"/>{{category.name}}
+            <table broder = 1>
+                {% for item in items %}
+                {% if item.name %}
+                <tr>
+                    <td>{{item.name}}</td>
+                    <td>{{item.wins}}</td>
+                    <td>{{item.loses}}</td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+            </table>
+            <hr>
+            <form>
+                <input type = submit name = ExportToXML value = ExportToXML>
+            </form>
+            <a href="{{ url }}">{{ url_linktext }}</a>
+    </body>
+</html>

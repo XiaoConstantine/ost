@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+        <title>Home</title>
+    </head>
+    <body>
+        <div>Welcome, {{ user }}, </div>
+        <form action="/RecordVote" method="post">
+            <div>Category: <input type = "radio" checked="checked" name="category_key" value="{{ category.key }}"/> {{category.name}}</div>
+            <hr>
+            <div><input type="radio" name="win_lose" value="{{firstItem.name}}/{{secondItem.name}}"/>{{ firstItem.name }}</div>
+            <div><input type="radio" name="win_lose" value="{{secondItem.name}}/{{firstItem.name}}"/>{{ secondItem.name }}</div>
+            <div><input type="submit" name="RecordVote" value="Vote"></div>
+        </form>
+        <hr>
+        <a href="/">Back to Home</a>
+    </body>
+</html>

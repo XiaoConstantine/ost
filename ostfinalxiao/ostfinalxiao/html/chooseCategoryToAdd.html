@@ -1,0 +1,19 @@
+<html>
+	<title>Choose to Add</title>
+	<head>
+        <link type=text/css rel=stylesheet href=/stylesheets/main.css/>
+	</head>
+	<body>
+		<div>{{ user }}</div>
+        <p>Choose a category to add item</p>
+		<form action=/addItem method=post>
+            {% for category in categorys %}
+            {% if category.name %}
+		    <p> <input type=radio name=category_key value={{ category.key }}>{{ category.name }}</p>
+                {% endif %}
+                {% endfor %}
+                <div><input type=submit value=Choose></div>
+                </form>
+    </body>
+	<a href="{{ url }}">{{ url_linktext }}</a>
+</html>

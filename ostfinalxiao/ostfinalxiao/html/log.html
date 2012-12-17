@@ -1,6 +1,27 @@
 <html>
 	<title>Log</title>
+	<head>
+		<link type=text/css rel=stylesheet href=/stylesheets/main.css/>
+	</head>
 	<body>
+		<div>Hello, {{ user }}</div>
 
+		<form action=/addCategory method=post>
+			<div><input type=submit value = "New Category"></div>
+		</form>
+
+		<form action=/chooseCategoryToAdd method=post>
+			<div><input type=submit value="New Item"></div>
+		</form>
+
+		<form action=/Vote method=post>
+			<div><input type=submit value=Vote></div>
+		</form>
+
+		<form action=/ChooseCategoryToResult method=post>
+			<div><input type=submit value= "show results"></div>
+		</form>
+
+		<a href="{{ url }}">{{ url_linktext}}</a>
 	</body>
 </html>

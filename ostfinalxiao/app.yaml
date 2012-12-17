@@ -9,8 +9,12 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
 
+- url: /log
+  script: log.py
+
+
 - url: .*
-  script: main.app
+  script: log.py
 
 libraries:
 - name: webapp2

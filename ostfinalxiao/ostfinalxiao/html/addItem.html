@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<link type=text/css rel=stylesheet href=/stylesheets/main.css/>
+		<title>Add Item</title>
+	</head>
+	<body>
+		<form action=/addItem method=post>
+            <p>Category:<input type=radio checked="checked" name="category_key" value={{ category.key }}>{{ category.name }}</p>
+          <table border = 1>
+              {% for item in category.items %}
+               {% if item.name %}
+                  <tr>
+                      <td>{{ item.name }}</td>
+                  <tr>
+               {% endif %}
+              {% endfor %}
+			<div><input type=textarea name=item></div>
+			<div><input type=submit value="Add Item"></div>
+		</form>
+        
+		<a href="{{ url }}">{{ url_linktext }}</a>
+	</body>
+</html>

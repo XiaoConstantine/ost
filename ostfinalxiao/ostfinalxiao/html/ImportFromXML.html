@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>ImportFromXml</title>
+	<head>
+	   <link type=text/css rel=stylesheet href=/stylesheets/main.css/>
+	</head>
+	<body>
+		<div>{{ user }}</div>
+		<form enctype="multipart/form-data" method=post action="/parse_xml">
+            <br>
+            Choose a file to upload
+            <input type="file" name = "file"/>
+            <br>
+            <input type="submit" value = "upload"/>
+        </form>
+    </body>
+	<a href="{{ url }}">{{ url_linktext }}</a>
+</html>

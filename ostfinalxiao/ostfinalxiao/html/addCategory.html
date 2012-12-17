@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<link type=text/css rel=stylesheet href=/stylesheets/main.css/>
+		<title>Add Category</title>
+	</head>
+	<body>
+		<div>{{ user }}</div>
+		<form action=/addCategory method=post>
+			<table border=1>
+			{% for category in old_categorys %}
+			   {% if category.name %}
+                    <tr>
+                        <td> {{ category.name }} </td>
+                    </tr>
+				{% endif %}
+			{% endfor %}
+			</table>
+			<div><input type=textarea name="add_Category"></div>
+			<div><input type=submit value="Add Category"></div>
+		</form>
+        <hr>
+        <form action=/ImportFromXML method=post>
+             <div><input type=submit value="Import From XML"></div>
+        </form>
+		<a href="{{ url }}">{{ url_linktext }}</a>
+	</body>
+</html>
