@@ -287,18 +287,7 @@ class ImportFromXML(webapp2.RequestHandler):
         path = os.path.join(os.path.dirname(__file__), 'html/ImportFromXML.html')
         self.response.out.write(template.render(path,template_values))
 
-            #    def upload_file(request):
-            #        if request.method == 'POST':
-            #upload = UploadFileForm(request.POST, request.FILES)
-            #if upload.is_valid():
-            #    upload = upload.save(commit=False)
-            #   upload.filename = request.FILES['upfile'].name
-            #   upload = upload.save()
-            #   return HttpResponseRedirect('/success')
-            #else:
-            #form = UploadFileForm()
-#return render_to_response('html/ImportFromXML.html', {'form': form})
-
+            
 ######################################################################
 
 
